@@ -40,7 +40,6 @@
             .away{position:fixed;right:200%;}
             .bold{font-weight:bold;}
             .box_content{display:none;}
-            .box_content form{/* padding-top:35px; max-width:355px;*/}
             .box_content.js-section_active{display:block;}
             .box_hotels_title{padding:55px 10px; box-sizing: border-box;}
             .step_2 .box_intro{display:none;}
@@ -66,8 +65,6 @@
             .div_rrss_footer{padding:5px;}
             .div_rrss_footer > a{padding-left:8px;}
             .enviar_atras_div{padding-top:30px!important;}
-            /* .f_left{float:left;}
-            .f_right{float:right;} */
             .footer_div{background-color:#00111b;text-align:center;}
             .footer_div>*{width:100%;}
             .form_section{width:100%;max-width:870px;margin:0 auto;padding-top:50px;}
@@ -75,13 +72,13 @@
             .header_content>*{padding:8px 0;}
             .header_content > a{margin: 0 auto;}
             .hidden{display:none;}
-            .hotel_box_content{position:relative;padding:40px 0;display:table-cell;vertical-align:bottom;}
-            .hotel_box{box-sizing:border-box;width:100%;vertical-align:top;padding:2px 2px;}
-            .hotel_box.desactiv{pointer-events:none;opacity:.4;}
+            .hotel_box_content{position:relative;padding:40px 0 68px;display:table-cell;vertical-align:bottom;}
+            .hotel_box{box-sizing:border-box;width:100%;vertical-align:top;padding:2px 2px; border-radius: 20px;}
+            .hotel_box.desactiv{pointer-events:none;opacity:.4; }
             .hotel_box>div{position:relative;}
             .hotel_box>*:first-child{background-blend-mode:multiply;background-color: rgba(203,157,137,0.7);display:inline-table!important;height:400px;width:100%;}
             .hotels_container .hotel_box.disabled>div::after{content:'';position:absolute;top:0;left:0;bottom:0;right:0;opacity:0.2;}
-            .hotels_container .hotel_box>div::before{content:'';position:absolute;top:0;left:0;bottom:0;right:0;background: rgba(0, 117, 161,.3)}
+            .hotels_container .hotel_box>div::before{content:'';position:absolute;top:0;left:0;bottom:0;right:0;background: rgba(0, 117, 161,.3); border-radius: 20px;}
             .hotels_container .hotel_box.disabled{opacity:0.5;}
             .hotel_section{width:100%;margin: 0 auto;margin-top:-50px;}
             @media(min-width:650px){
@@ -163,8 +160,8 @@
             .rr_ss{background-color:transparent;border:none;}
             .step_3 .quiero_participar{display:none;}	
             .step_3 .header_content{padding:15px 0px;}
-            .ver_mas{display:inline-block;color:#ffffff;background-color:transparent;font-family:'Roboto';font-size:17px;text-transform:uppercase;padding:7px;letter-spacing: 0.025em; position: absolute; bottom: 0;right: 0; left: 0; width: 100%; border: none; background: #fb8c5a; text-transform: uppercase;}
-            .ver_mas:hover{;font-weight:bold;}
+            .ver_mas{display:inline-block;color:#ffffff;background-color:transparent;font-family:'Roboto';font-size:17px;text-transform:uppercase;padding:13px;letter-spacing: 0.025em; position: absolute; bottom: 0;right: 0; left: 0; width: 100%; border: none; background: #fb8c5a; text-transform: uppercase; border-radius: 0 0 20px 20px; }
+            .ver_mas:hover{font-weight:bold;}
 
         /*TEXTS*/
             mark+.date_placeholder{bottom:14px;}
@@ -181,7 +178,7 @@
                 .button_cont_l,
                 .button_cont_r{max-width: none;}
             }
-            .nombre_hotel{font-family:'Droid Serif';font-size:25px;text-align:center;padding:0 20px;}
+            .nombre_hotel{font-family:'Roboto';font-size:25px;font-weight: bold;text-align:center;padding:0 20px; letter-spacing: 0.025em;}
             .nombre_ciudad{font: 300 20px 'Roboto';text-transform:uppercase;padding-bottom:2px;}
             .text1{font:14px/19px 'Roboto',sans-serif;text-align:center;max-width:750px;padding:0 10px;
             box-sizing: border-box;}
@@ -199,7 +196,7 @@
             .rrss_suerte{font-size: 24px;}
 
         /*IMAGENES*/
-            .background_img{background-position:center;background-repeat:no-repeat;background-size:cover;display:block;}
+            .background_img{background-position:center;background-repeat:no-repeat;background-size:cover;display:block; border-radius: 20px;}
             .logo_eur{max-width:280px;}
             .rrss_logo{position:relative;top:28%;}  
 
@@ -230,8 +227,6 @@
             .div_rrss_footer{text-align:right;margin-right:30px;}
             .enviar_atras_div{padding-top:50px;}
             .form_section{max-width:870px;}
-            .hotel_box:nth-of-type(-n+5)>div{padding-top: 60px;}
-            .hotel_box:nth-of-type(n+5)>div{padding-top: 60px;}
             .hotels_container{max-width:1265px;}
             .footer_div{text-align:left;}
             .footer_div>*{width:50%;vertical-align:middle;}
@@ -392,19 +387,20 @@
                     
                     <!-- BEGIN hijos_row -->
 
+          
                     <input value="{_HIJO_XT_CODIGO_HOTEL}" class="away" type="checkbox" id="sta-input_{_HIJO_ID_PROD}">
                     <div class="hotel_box foh js-hotel">
-						<div class="background_img" style="background-image: url(images/hotel1.jpg);"><!--url({_HIJO_XF_FOTO_HOTEL})-->
+						<div class="background_img" style="background-image: url({_HIJO_XF_FOTO_HOTEL});"><!--url({_HIJO_XF_FOTO_HOTEL})-->
 							<div class="hotel_box_content"> 
 								<div class="numero_hotel"><img class="padding_bottom_auxiliar" src="{_HIJO_XF_NUMERO_HOTEL}"></div>
 								<label class="tick_hotel icons" for="sta-input_{_HIJO_ID_PROD}">         
-                                    <svg viewBox="0 0 33.97 57.08"><path class="sta-relleno" d="M34.31,32.5A15.95,15.95,0,0,1,18.46,48.62,16,16,0,0,1,2.34,32.78C2.24,24,9.22,2.59,18,2.5S34.22,23.66,34.31,32.5Z" transform="translate(-1.33 -1.5)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px"/><text transform="translate(6.64 36.93)" style="isolation:isolate;font-size:22.849700927734375px;fill:#fff;font-family:DINPro-Medium, DINPro;font-weight:500;letter-spacing:-0.04299495551854518em">1</text><path d="M26.6,46.34v4.15a7.09,7.09,0,0,1-7.07,7.09H17.11A7.06,7.06,0,0,1,10,50.5V46.3a16.05,16.05,0,0,0,16.56,0Z" transform="translate(-1.33 -1.5)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px"/></svg>
+                                    <svg viewBox="0 0 33.97 57.08"><path class="sta-relleno" d="M34.31,32.5A15.95,15.95,0,0,1,18.46,48.62,16,16,0,0,1,2.34,32.78C2.24,24,9.22,2.59,18,2.5S34.22,23.66,34.31,32.5Z" transform="translate(-1.33 -1.5)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px"/><text transform="translate(6.64 36.93)" style="isolation:isolate;font-size:22.849700927734375px;fill:#fff;font-family:DINPro-Medium, DINPro;font-weight:500;letter-spacing:-0.04299495551854518em"></text><path d="M26.6,46.34v4.15a7.09,7.09,0,0,1-7.07,7.09H17.11A7.06,7.06,0,0,1,10,50.5V46.3a16.05,16.05,0,0,0,16.56,0Z" transform="translate(-1.33 -1.5)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px"/></svg>
 								</label>
 								<div class="ciudad_hotel_box min_height75px min_height120px_tablet">
-								   <span class="nombre_ciudad white">Valladolid</span><!--{_HIJO_XT_LOCALIZACION_HOTEL}-->
-								   <span class="nombre_hotel white">Eurostars Valladolid</span><!--{_HIJO_XT_NOMBRE_HOTEL}-->
+								   <span class="nombre_ciudad white">{_HIJO_XT_LOCALIZACION_HOTEL}</span><!--{_HIJO_XT_LOCALIZACION_HOTEL}-->
+								   <span class="nombre_hotel white">{_HIJO_XT_NOMBRE_HOTEL}</span><!--{_HIJO_XT_NOMBRE_HOTEL}-->
 								</div>
-								   <button class="js-toggleModal uppercase ver_mas">Ver mas</button><!--{_HIJO_XT_VER_MAS}-->
+								   <button class="js-toggleModal uppercase ver_mas">{_HIJO_XT_VER_MAS}</button><!--{_HIJO_XT_VER_MAS}-->
                             </div>
                             
 
@@ -430,351 +426,6 @@
 
 
 
-                    <input value="{_HIJO_XT_CODIGO_HOTEL}" class="away" type="checkbox" id="sta-input_{_HIJO_ID_PROD}">
-                    <div class="hotel_box foh js-hotel">
-						<div class="background_img" style="background-image: url(images/hotel1.jpg);"><!--url({_HIJO_XF_FOTO_HOTEL})-->
-							<div class="hotel_box_content"> 
-								<div class="numero_hotel"><img class="padding_bottom_auxiliar" src="{_HIJO_XF_NUMERO_HOTEL}"></div>
-								<label class="tick_hotel icons" for="sta-input_{_HIJO_ID_PROD}">         
-                                    <svg viewBox="0 0 33.97 57.08"><path class="sta-relleno" d="M34.31,32.5A15.95,15.95,0,0,1,18.46,48.62,16,16,0,0,1,2.34,32.78C2.24,24,9.22,2.59,18,2.5S34.22,23.66,34.31,32.5Z" transform="translate(-1.33 -1.5)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px"/><text transform="translate(6.64 36.93)" style="isolation:isolate;font-size:22.849700927734375px;fill:#fff;font-family:DINPro-Medium, DINPro;font-weight:500;letter-spacing:-0.04299495551854518em">2</text><path d="M26.6,46.34v4.15a7.09,7.09,0,0,1-7.07,7.09H17.11A7.06,7.06,0,0,1,10,50.5V46.3a16.05,16.05,0,0,0,16.56,0Z" transform="translate(-1.33 -1.5)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px"/></svg>
-								</label>
-								<div class="ciudad_hotel_box min_height75px min_height120px_tablet">
-								   <span class="nombre_ciudad white">Valladolid</span><!--{_HIJO_XT_LOCALIZACION_HOTEL}-->
-								   <span class="nombre_hotel white">Eurostars Valladolid</span><!--{_HIJO_XT_NOMBRE_HOTEL}-->
-								</div>
-								   <button class="js-toggleModal uppercase ver_mas">Ver mas</button><!--{_HIJO_XT_VER_MAS}-->
-                            </div>
-                            
-
-							<div class="modal auto js-hotel_popup">
-								<!-- Cruceta -->
-								<div class="aspa js-toggleModal"></div> 
-								<!-- Img y textos --> 
-								<div class="auto">
-									<div class="nombre_hotel black">{_HIJO_XT_NOMBRE_HOTEL}</div><!---->
-									<div class="nombre_ciudad">{_HIJO_XT_LOCALIZACION_HOTEL}</div><!---->
-									<img class="popup_foto auto" src="{_HIJO_XF_FOTO_HOTEL}"><!---->
-									<div class="listado align_l">
-										<div class="uppercase">{_HIJO_XT_RAZONES}</div>
-										<ul>
-                                            {_HIJO_XA_ITEM-RAZON}
-										</ul>
-									</div>
-								</div>
-                            </div>
-						</div>
-                    </div>
-
-
-
-
-                    <input value="{_HIJO_XT_CODIGO_HOTEL}" class="away" type="checkbox" id="sta-input_{_HIJO_ID_PROD}">
-                    <div class="hotel_box foh js-hotel">
-						<div class="background_img" style="background-image: url(images/hotel1.jpg);"><!--url({_HIJO_XF_FOTO_HOTEL})-->
-							<div class="hotel_box_content"> 
-								<div class="numero_hotel"><img class="padding_bottom_auxiliar" src="{_HIJO_XF_NUMERO_HOTEL}"></div>
-								<label class="tick_hotel icons" for="sta-input_{_HIJO_ID_PROD}">         
-                                    <svg viewBox="0 0 33.97 57.08"><path class="sta-relleno" d="M34.31,32.5A15.95,15.95,0,0,1,18.46,48.62,16,16,0,0,1,2.34,32.78C2.24,24,9.22,2.59,18,2.5S34.22,23.66,34.31,32.5Z" transform="translate(-1.33 -1.5)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px"/><text transform="translate(6.64 36.93)" style="isolation:isolate;font-size:22.849700927734375px;fill:#fff;font-family:DINPro-Medium, DINPro;font-weight:500;letter-spacing:-0.04299495551854518em">3</text><path d="M26.6,46.34v4.15a7.09,7.09,0,0,1-7.07,7.09H17.11A7.06,7.06,0,0,1,10,50.5V46.3a16.05,16.05,0,0,0,16.56,0Z" transform="translate(-1.33 -1.5)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px"/></svg>
-								</label>
-								<div class="ciudad_hotel_box min_height75px min_height120px_tablet">
-								   <span class="nombre_ciudad white">Valladolid</span><!--{_HIJO_XT_LOCALIZACION_HOTEL}-->
-								   <span class="nombre_hotel white">Eurostars Valladolid</span><!--{_HIJO_XT_NOMBRE_HOTEL}-->
-								</div>
-								   <button class="js-toggleModal uppercase ver_mas">Ver mas</button><!--{_HIJO_XT_VER_MAS}-->
-                            </div>
-                            
-
-							<div class="modal auto js-hotel_popup">
-								<!-- Cruceta -->
-								<div class="aspa js-toggleModal"></div> 
-								<!-- Img y textos --> 
-								<div class="auto">
-									<div class="nombre_hotel black">{_HIJO_XT_NOMBRE_HOTEL}</div><!---->
-									<div class="nombre_ciudad">{_HIJO_XT_LOCALIZACION_HOTEL}</div><!---->
-									<img class="popup_foto auto" src="{_HIJO_XF_FOTO_HOTEL}"><!---->
-									<div class="listado align_l">
-										<div class="uppercase">{_HIJO_XT_RAZONES}</div>
-										<ul>
-                                            {_HIJO_XA_ITEM-RAZON}
-										</ul>
-									</div>
-								</div>
-                            </div>
-						</div>
-                    </div>
-
-
-
-
-
-                    <input value="{_HIJO_XT_CODIGO_HOTEL}" class="away" type="checkbox" id="sta-input_{_HIJO_ID_PROD}">
-                    <div class="hotel_box foh js-hotel">
-						<div class="background_img" style="background-image: url(images/hotel1.jpg);"><!--url({_HIJO_XF_FOTO_HOTEL})-->
-							<div class="hotel_box_content"> 
-								<div class="numero_hotel"><img class="padding_bottom_auxiliar" src="{_HIJO_XF_NUMERO_HOTEL}"></div>
-								<label class="tick_hotel icons" for="sta-input_{_HIJO_ID_PROD}">         
-                                    <svg viewBox="0 0 33.97 57.08"><path class="sta-relleno" d="M34.31,32.5A15.95,15.95,0,0,1,18.46,48.62,16,16,0,0,1,2.34,32.78C2.24,24,9.22,2.59,18,2.5S34.22,23.66,34.31,32.5Z" transform="translate(-1.33 -1.5)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px"/><text transform="translate(6.64 36.93)" style="isolation:isolate;font-size:22.849700927734375px;fill:#fff;font-family:DINPro-Medium, DINPro;font-weight:500;letter-spacing:-0.04299495551854518em">4</text><path d="M26.6,46.34v4.15a7.09,7.09,0,0,1-7.07,7.09H17.11A7.06,7.06,0,0,1,10,50.5V46.3a16.05,16.05,0,0,0,16.56,0Z" transform="translate(-1.33 -1.5)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px"/></svg>
-								</label>
-								<div class="ciudad_hotel_box min_height75px min_height120px_tablet">
-								   <span class="nombre_ciudad white">Valladolid</span><!--{_HIJO_XT_LOCALIZACION_HOTEL}-->
-								   <span class="nombre_hotel white">Eurostars Valladolid</span><!--{_HIJO_XT_NOMBRE_HOTEL}-->
-								</div>
-								   <button class="js-toggleModal uppercase ver_mas">Ver mas</button><!--{_HIJO_XT_VER_MAS}-->
-                            </div>
-                            
-
-							<div class="modal auto js-hotel_popup">
-								<!-- Cruceta -->
-								<div class="aspa js-toggleModal"></div> 
-								<!-- Img y textos --> 
-								<div class="auto">
-									<div class="nombre_hotel black">{_HIJO_XT_NOMBRE_HOTEL}</div><!---->
-									<div class="nombre_ciudad">{_HIJO_XT_LOCALIZACION_HOTEL}</div><!---->
-									<img class="popup_foto auto" src="{_HIJO_XF_FOTO_HOTEL}"><!---->
-									<div class="listado align_l">
-										<div class="uppercase">{_HIJO_XT_RAZONES}</div>
-										<ul>
-                                            {_HIJO_XA_ITEM-RAZON}
-										</ul>
-									</div>
-								</div>
-                            </div>
-						</div>
-                    </div>
-
-
-
-
-
-                    <input value="{_HIJO_XT_CODIGO_HOTEL}" class="away" type="checkbox" id="sta-input_{_HIJO_ID_PROD}">
-                    <div class="hotel_box foh js-hotel">
-						<div class="background_img" style="background-image: url(images/hotel1.jpg);"><!--url({_HIJO_XF_FOTO_HOTEL})-->
-							<div class="hotel_box_content"> 
-								<div class="numero_hotel"><img class="padding_bottom_auxiliar" src="{_HIJO_XF_NUMERO_HOTEL}"></div>
-								<label class="tick_hotel icons" for="sta-input_{_HIJO_ID_PROD}">         
-                                    <svg viewBox="0 0 33.97 57.08"><path class="sta-relleno" d="M34.31,32.5A15.95,15.95,0,0,1,18.46,48.62,16,16,0,0,1,2.34,32.78C2.24,24,9.22,2.59,18,2.5S34.22,23.66,34.31,32.5Z" transform="translate(-1.33 -1.5)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px"/><text transform="translate(6.64 36.93)" style="isolation:isolate;font-size:22.849700927734375px;fill:#fff;font-family:DINPro-Medium, DINPro;font-weight:500;letter-spacing:-0.04299495551854518em">5</text><path d="M26.6,46.34v4.15a7.09,7.09,0,0,1-7.07,7.09H17.11A7.06,7.06,0,0,1,10,50.5V46.3a16.05,16.05,0,0,0,16.56,0Z" transform="translate(-1.33 -1.5)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px"/></svg>
-								</label>
-								<div class="ciudad_hotel_box min_height75px min_height120px_tablet">
-								   <span class="nombre_ciudad white">Valladolid</span><!--{_HIJO_XT_LOCALIZACION_HOTEL}-->
-								   <span class="nombre_hotel white">Eurostars Valladolid</span><!--{_HIJO_XT_NOMBRE_HOTEL}-->
-								</div>
-								   <button class="js-toggleModal uppercase ver_mas">Ver mas</button><!--{_HIJO_XT_VER_MAS}-->
-                            </div>
-                            
-
-							<div class="modal auto js-hotel_popup">
-								<!-- Cruceta -->
-								<div class="aspa js-toggleModal"></div> 
-								<!-- Img y textos --> 
-								<div class="auto">
-									<div class="nombre_hotel black">{_HIJO_XT_NOMBRE_HOTEL}</div><!---->
-									<div class="nombre_ciudad">{_HIJO_XT_LOCALIZACION_HOTEL}</div><!---->
-									<img class="popup_foto auto" src="{_HIJO_XF_FOTO_HOTEL}"><!---->
-									<div class="listado align_l">
-										<div class="uppercase">{_HIJO_XT_RAZONES}</div>
-										<ul>
-                                            {_HIJO_XA_ITEM-RAZON}
-										</ul>
-									</div>
-								</div>
-                            </div>
-						</div>
-                    </div>
-
-
-
-
-
-                    <input value="{_HIJO_XT_CODIGO_HOTEL}" class="away" type="checkbox" id="sta-input_{_HIJO_ID_PROD}">
-                    <div class="hotel_box foh js-hotel">
-						<div class="background_img" style="background-image: url(images/hotel1.jpg);"><!--url({_HIJO_XF_FOTO_HOTEL})-->
-							<div class="hotel_box_content"> 
-								<div class="numero_hotel"><img class="padding_bottom_auxiliar" src="{_HIJO_XF_NUMERO_HOTEL}"></div>
-								<label class="tick_hotel icons" for="sta-input_{_HIJO_ID_PROD}">         
-                                    <svg viewBox="0 0 33.97 57.08"><path class="sta-relleno" d="M34.31,32.5A15.95,15.95,0,0,1,18.46,48.62,16,16,0,0,1,2.34,32.78C2.24,24,9.22,2.59,18,2.5S34.22,23.66,34.31,32.5Z" transform="translate(-1.33 -1.5)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px"/><text transform="translate(6.64 36.93)" style="isolation:isolate;font-size:22.849700927734375px;fill:#fff;font-family:DINPro-Medium, DINPro;font-weight:500;letter-spacing:-0.04299495551854518em">6</text><path d="M26.6,46.34v4.15a7.09,7.09,0,0,1-7.07,7.09H17.11A7.06,7.06,0,0,1,10,50.5V46.3a16.05,16.05,0,0,0,16.56,0Z" transform="translate(-1.33 -1.5)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px"/></svg>
-								</label>
-								<div class="ciudad_hotel_box min_height75px min_height120px_tablet">
-								   <span class="nombre_ciudad white">Valladolid</span><!--{_HIJO_XT_LOCALIZACION_HOTEL}-->
-								   <span class="nombre_hotel white">Eurostars Valladolid</span><!--{_HIJO_XT_NOMBRE_HOTEL}-->
-								</div>
-								   <button class="js-toggleModal uppercase ver_mas">Ver mas</button><!--{_HIJO_XT_VER_MAS}-->
-                            </div>
-                            
-
-							<div class="modal auto js-hotel_popup">
-								<!-- Cruceta -->
-								<div class="aspa js-toggleModal"></div> 
-								<!-- Img y textos --> 
-								<div class="auto">
-									<div class="nombre_hotel black">{_HIJO_XT_NOMBRE_HOTEL}</div><!---->
-									<div class="nombre_ciudad">{_HIJO_XT_LOCALIZACION_HOTEL}</div><!---->
-									<img class="popup_foto auto" src="{_HIJO_XF_FOTO_HOTEL}"><!---->
-									<div class="listado align_l">
-										<div class="uppercase">{_HIJO_XT_RAZONES}</div>
-										<ul>
-                                            {_HIJO_XA_ITEM-RAZON}
-										</ul>
-									</div>
-								</div>
-                            </div>
-						</div>
-                    </div>
-
-
-
-
-
-                    <input value="{_HIJO_XT_CODIGO_HOTEL}" class="away" type="checkbox" id="sta-input_{_HIJO_ID_PROD}">
-                    <div class="hotel_box foh js-hotel">
-						<div class="background_img" style="background-image: url(images/hotel1.jpg);"><!--url({_HIJO_XF_FOTO_HOTEL})-->
-							<div class="hotel_box_content"> 
-								<div class="numero_hotel"><img class="padding_bottom_auxiliar" src="{_HIJO_XF_NUMERO_HOTEL}"></div>
-								<label class="tick_hotel icons" for="sta-input_{_HIJO_ID_PROD}">         
-                                    <svg viewBox="0 0 33.97 57.08"><path class="sta-relleno" d="M34.31,32.5A15.95,15.95,0,0,1,18.46,48.62,16,16,0,0,1,2.34,32.78C2.24,24,9.22,2.59,18,2.5S34.22,23.66,34.31,32.5Z" transform="translate(-1.33 -1.5)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px"/><text transform="translate(6.64 36.93)" style="isolation:isolate;font-size:22.849700927734375px;fill:#fff;font-family:DINPro-Medium, DINPro;font-weight:500;letter-spacing:-0.04299495551854518em">7</text><path d="M26.6,46.34v4.15a7.09,7.09,0,0,1-7.07,7.09H17.11A7.06,7.06,0,0,1,10,50.5V46.3a16.05,16.05,0,0,0,16.56,0Z" transform="translate(-1.33 -1.5)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px"/></svg>
-								</label>
-								<div class="ciudad_hotel_box min_height75px min_height120px_tablet">
-								   <span class="nombre_ciudad white">Valladolid</span><!--{_HIJO_XT_LOCALIZACION_HOTEL}-->
-								   <span class="nombre_hotel white">Eurostars Valladolid</span><!--{_HIJO_XT_NOMBRE_HOTEL}-->
-								</div>
-								   <button class="js-toggleModal uppercase ver_mas">Ver mas</button><!--{_HIJO_XT_VER_MAS}-->
-                            </div>
-                            
-
-							<div class="modal auto js-hotel_popup">
-								<!-- Cruceta -->
-								<div class="aspa js-toggleModal"></div> 
-								<!-- Img y textos --> 
-								<div class="auto">
-									<div class="nombre_hotel black">{_HIJO_XT_NOMBRE_HOTEL}</div><!---->
-									<div class="nombre_ciudad">{_HIJO_XT_LOCALIZACION_HOTEL}</div><!---->
-									<img class="popup_foto auto" src="{_HIJO_XF_FOTO_HOTEL}"><!---->
-									<div class="listado align_l">
-										<div class="uppercase">{_HIJO_XT_RAZONES}</div>
-										<ul>
-                                            {_HIJO_XA_ITEM-RAZON}
-										</ul>
-									</div>
-								</div>
-                            </div>
-						</div>
-                    </div>
-
-
-
-
-
-                    <input value="{_HIJO_XT_CODIGO_HOTEL}" class="away" type="checkbox" id="sta-input_{_HIJO_ID_PROD}">
-                    <div class="hotel_box foh js-hotel">
-						<div class="background_img" style="background-image: url(images/hotel1.jpg);"><!--url({_HIJO_XF_FOTO_HOTEL})-->
-							<div class="hotel_box_content"> 
-								<div class="numero_hotel"><img class="padding_bottom_auxiliar" src="{_HIJO_XF_NUMERO_HOTEL}"></div>
-								<label class="tick_hotel icons" for="sta-input_{_HIJO_ID_PROD}">         
-                                    <svg viewBox="0 0 33.97 57.08"><path class="sta-relleno" d="M34.31,32.5A15.95,15.95,0,0,1,18.46,48.62,16,16,0,0,1,2.34,32.78C2.24,24,9.22,2.59,18,2.5S34.22,23.66,34.31,32.5Z" transform="translate(-1.33 -1.5)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px"/><text transform="translate(6.64 36.93)" style="isolation:isolate;font-size:22.849700927734375px;fill:#fff;font-family:DINPro-Medium, DINPro;font-weight:500;letter-spacing:-0.04299495551854518em">8</text><path d="M26.6,46.34v4.15a7.09,7.09,0,0,1-7.07,7.09H17.11A7.06,7.06,0,0,1,10,50.5V46.3a16.05,16.05,0,0,0,16.56,0Z" transform="translate(-1.33 -1.5)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px"/></svg>
-								</label>
-								<div class="ciudad_hotel_box min_height75px min_height120px_tablet">
-								   <span class="nombre_ciudad white">Valladolid</span><!--{_HIJO_XT_LOCALIZACION_HOTEL}-->
-								   <span class="nombre_hotel white">Eurostars Valladolid</span><!--{_HIJO_XT_NOMBRE_HOTEL}-->
-								</div>
-								   <button class="js-toggleModal uppercase ver_mas">Ver mas</button><!--{_HIJO_XT_VER_MAS}-->
-                            </div>
-                            
-
-							<div class="modal auto js-hotel_popup">
-								<!-- Cruceta -->
-								<div class="aspa js-toggleModal"></div> 
-								<!-- Img y textos --> 
-								<div class="auto">
-									<div class="nombre_hotel black">{_HIJO_XT_NOMBRE_HOTEL}</div><!---->
-									<div class="nombre_ciudad">{_HIJO_XT_LOCALIZACION_HOTEL}</div><!---->
-									<img class="popup_foto auto" src="{_HIJO_XF_FOTO_HOTEL}"><!---->
-									<div class="listado align_l">
-										<div class="uppercase">{_HIJO_XT_RAZONES}</div>
-										<ul>
-                                            {_HIJO_XA_ITEM-RAZON}
-										</ul>
-									</div>
-								</div>
-                            </div>
-						</div>
-                    </div>
-
-
-
-
-
-                    <input value="{_HIJO_XT_CODIGO_HOTEL}" class="away" type="checkbox" id="sta-input_{_HIJO_ID_PROD}">
-                    <div class="hotel_box foh js-hotel">
-						<div class="background_img" style="background-image: url(images/hotel1.jpg);"><!--url({_HIJO_XF_FOTO_HOTEL})-->
-							<div class="hotel_box_content"> 
-								<div class="numero_hotel"><img class="padding_bottom_auxiliar" src="{_HIJO_XF_NUMERO_HOTEL}"></div>
-								<label class="tick_hotel icons" for="sta-input_{_HIJO_ID_PROD}">         
-                                    <svg viewBox="0 0 33.97 57.08"><path class="sta-relleno" d="M34.31,32.5A15.95,15.95,0,0,1,18.46,48.62,16,16,0,0,1,2.34,32.78C2.24,24,9.22,2.59,18,2.5S34.22,23.66,34.31,32.5Z" transform="translate(-1.33 -1.5)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px"/><text transform="translate(6.64 36.93)" style="isolation:isolate;font-size:22.849700927734375px;fill:#fff;font-family:DINPro-Medium, DINPro;font-weight:500;letter-spacing:-0.04299495551854518em">9</text><path d="M26.6,46.34v4.15a7.09,7.09,0,0,1-7.07,7.09H17.11A7.06,7.06,0,0,1,10,50.5V46.3a16.05,16.05,0,0,0,16.56,0Z" transform="translate(-1.33 -1.5)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px"/></svg>
-								</label>
-								<div class="ciudad_hotel_box min_height75px min_height120px_tablet">
-								   <span class="nombre_ciudad white">Valladolid</span><!--{_HIJO_XT_LOCALIZACION_HOTEL}-->
-								   <span class="nombre_hotel white">Eurostars Valladolid</span><!--{_HIJO_XT_NOMBRE_HOTEL}-->
-								</div>
-								   <button class="js-toggleModal uppercase ver_mas">Ver mas</button><!--{_HIJO_XT_VER_MAS}-->
-                            </div>
-                            
-
-							<div class="modal auto js-hotel_popup">
-								<!-- Cruceta -->
-								<div class="aspa js-toggleModal"></div> 
-								<!-- Img y textos --> 
-								<div class="auto">
-									<div class="nombre_hotel black">{_HIJO_XT_NOMBRE_HOTEL}</div><!---->
-									<div class="nombre_ciudad">{_HIJO_XT_LOCALIZACION_HOTEL}</div><!---->
-									<img class="popup_foto auto" src="{_HIJO_XF_FOTO_HOTEL}"><!---->
-									<div class="listado align_l">
-										<div class="uppercase">{_HIJO_XT_RAZONES}</div>
-										<ul>
-                                            {_HIJO_XA_ITEM-RAZON}
-										</ul>
-									</div>
-								</div>
-                            </div>
-						</div>
-                    </div>
-
-
-
-
-
-                    <input value="{_HIJO_XT_CODIGO_HOTEL}" class="away" type="checkbox" id="sta-input_{_HIJO_ID_PROD}">
-                    <div class="hotel_box foh js-hotel">
-						<div class="background_img" style="background-image: url(images/hotel1.jpg);"><!--url({_HIJO_XF_FOTO_HOTEL})-->
-							<div class="hotel_box_content"> 
-								<div class="numero_hotel"><img class="padding_bottom_auxiliar" src="{_HIJO_XF_NUMERO_HOTEL}"></div>
-								<label class="tick_hotel icons" for="sta-input_{_HIJO_ID_PROD}">         
-                                    <svg viewBox="0 0 33.97 57.08"><path class="sta-relleno" d="M34.31,32.5A15.95,15.95,0,0,1,18.46,48.62,16,16,0,0,1,2.34,32.78C2.24,24,9.22,2.59,18,2.5S34.22,23.66,34.31,32.5Z" transform="translate(-1.33 -1.5)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px"/><text transform="translate(6.64 36.93)" style="isolation:isolate;font-size:22.849700927734375px;fill:#fff;font-family:DINPro-Medium, DINPro;font-weight:500;letter-spacing:-0.04299495551854518em">10</text><path d="M26.6,46.34v4.15a7.09,7.09,0,0,1-7.07,7.09H17.11A7.06,7.06,0,0,1,10,50.5V46.3a16.05,16.05,0,0,0,16.56,0Z" transform="translate(-1.33 -1.5)" style="fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px"/></svg>
-								</label>
-								<div class="ciudad_hotel_box min_height75px min_height120px_tablet">
-								   <span class="nombre_ciudad white">Valladolid</span><!--{_HIJO_XT_LOCALIZACION_HOTEL}-->
-								   <span class="nombre_hotel white">Eurostars Valladolid</span><!--{_HIJO_XT_NOMBRE_HOTEL}-->
-								</div>
-								   <button class="js-toggleModal uppercase ver_mas">Ver mas</button><!--{_HIJO_XT_VER_MAS}-->
-                            </div>
-                            
-
-							<div class="modal auto js-hotel_popup">
-								<!-- Cruceta -->
-								<div class="aspa js-toggleModal"></div> 
-								<!-- Img y textos --> 
-								<div class="auto">
-									<div class="nombre_hotel black">{_HIJO_XT_NOMBRE_HOTEL}</div><!---->
-									<div class="nombre_ciudad">{_HIJO_XT_LOCALIZACION_HOTEL}</div><!---->
-									<img class="popup_foto auto" src="{_HIJO_XF_FOTO_HOTEL}"><!---->
-									<div class="listado align_l">
-										<div class="uppercase">{_HIJO_XT_RAZONES}</div>
-										<ul>
-                                            {_HIJO_XA_ITEM-RAZON}
-										</ul>
-									</div>
-								</div>
-                            </div>
-						</div>
-                    </div>
 
 
 
@@ -1190,7 +841,7 @@
             $('.tick_hotel').each(function(i,e){
             i == 9 ?
             $('svg text',e).html(i+1) :
-            $('svg text',e).html((i+1));
+            $('svg text',e).html(i+1);
             })
         </script>
     </body>
