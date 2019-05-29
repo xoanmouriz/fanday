@@ -1141,7 +1141,7 @@
                         obj.new.push("{_idioma}")
                         obj.nl.tags.hoteles = hoteles;
 
-                       /* $.ajax({
+                        $.ajax({
                             type: "POST",
                             url: 'https://nl.booking-channel.com/CLIENTES/nl/php/inscripcion2.0.php',
                             dataType: 'json',
@@ -1163,7 +1163,8 @@
                                         break;
                                 };
                             }
-                        })*/
+                        })
+
                     } else {
                         o_response.html('{_XT_ERRORES_EN_FORMULARIO}');
                         setTimeout(function () {
