@@ -63,7 +63,7 @@
             .div_logo_eur{padding:15px;}
             .div_rrss_footer{padding:5px;}
             .div_rrss_footer > a{padding-left:8px;}
-            .enviar_atras_div{padding:30px 0!important;}
+            .enviar_atras_div{padding:30px 0 50px!important;}
             .footer_div{background-color:#00111b;text-align:center;}
             .footer_div>*{width:100%;}
             .form_section{width:100%;max-width:870px;margin:0 auto;padding-top:50px;}
@@ -88,10 +88,13 @@
             .politicas label span:before{content: ""; width: 12px; height: 12px; position: absolute;top: 5px; left: 0; border: 1px solid #000; background: #fff; border-radius: 50%;}
             .politicas span:after{content: ""; width: 0; height: 0; transition: .3s; position: absolute; left: 3px; top: 8px;}
             .politicas label input:checked ~ span:after{content: ""; width: 8px; height: 8px; background: #000; position: absolute; left: 3px; top: 8px;border-radius: 50%;}
+            .content{position: relative; border: 3px solid #fb8c5a; border-radius: 20px;}
+            .content .txt{position: absolute; bottom: -23px;}
             @media(min-width:650px){
             .hotel_section{margin-top:-70px;}
             .div_pink{max-width: 750px;margin:0 auto;}
             .inlineblock_parent{padding:0 50px;}
+            
             }
         /*max-width:1165px;*/
             .step_1 input:checked+.hotel_box .tick_hotel svg .sta-relleno,
@@ -112,14 +115,14 @@
             .margin_left5px{margin-left: 5px;}
             .margin_right5px{margin-right: 5px;}
             .min_height75px{min-height:75px;}
-            .modal{color:#ffffff;background:rgb(251, 140, 90,.95);border:none;box-sizing:border-box;/*box-shadow:0 0 2000px 2000px rgba(0,0,0,.5);*/display:none;left:10px;max-width:600px;padding:40px 20px 20px 20px;position:fixed;top:20%;right:10px;z-index:1000;width:auto; border-radius: 20px;}
+            .modal{color:#ffffff;background:rgb(251, 140, 90,.95);border:none;box-sizing:border-box;/*box-shadow:0 0 2000px 2000px rgba(0,0,0,.5);*/display:none;left:10px;max-width:600px;padding:40px 20px 20px 20px;position:fixed;top:20%;right:10px;z-index:1000;width:auto; border-radius: 20px; box-shadow: 0px 0px 20px 6px #000;}
             .modal .auto{max-width:500px;}
             .modal .aspa{border:1px solid #fff;border-radius:50%;display:inline-block;padding:5px;position:absolute;right:10px;top:10px;}
             .modal .aspa:hover{background:#fff;cursor:pointer;}
             .modal .aspa:after{content:'\e001';font:9px icons;line-height:9px;}
             .modal .aspa:hover:after{color:#006a91;}
             .modal .nombre_ciudad{padding:0;}
-            .modal img{background-position:center;background-repeat:no-repeat;background-size:cover;max-width:700px;width:85%;display:block;margin-top:15px; border: 10px solid #fff;}
+            .modal img{background-position:center;background-repeat:no-repeat;background-size:cover;max-width:700px;width:85%;display:block;margin-top:15px; border: 10px solid #fff; box-shadow: 1px 6px 19px -7px #000;}
             .modal .listado{font-size:12px;padding-top:15px;}
             .modal .listado div{font-weight:bold; border-bottom: 2px solid #fff; }
             .modal .listado ul{padding-left: 15px;}
@@ -152,7 +155,7 @@
             .button_cont_r{box-sizing:border-box;padding: 0;width:50%;max-width: 150px;}
             .button_invertido{background-color:#fb8c5a;color:#ffffff;font-family:'Roboto';font-size:25px;font-weight:bold;text-transform:uppercase;border: solid 3px #fb8c5a;padding:15px 43px;margin-top:15px;}
             .button_invertido:hover{background-color:#ffffff;color:#fb8c5a;}
-            .enviar_atras{color:#ffffff;background-color:#fb8c5a;font-family:'Roboto';font-size:20px;font-weight:bold;text-transform:uppercase;border: solid 3px #fb8c5a;padding:15px 30px;margin-top:0;}
+            .enviar_atras{color:#ffffff;background-color:#fb8c5a;font-family:'Roboto';font-size:20px;font-weight:bold;text-transform:uppercase;border: solid 3px #fb8c5a;padding:15px 30px;margin-top:0; transition: .3s;}
             .enviar_atras:hover{color:#fb8c5a;background-color:#ffffff;}
             .quiero_participar{color:#ffffff;background-color:#fb8c5a;font-family:'Roboto';font-size:18px;font-weight:bold;text-transform:uppercase;padding:15px;border:0;}
             .quiero_participar:hover{color:#fb8c5a;background-color:#ffffff;}
@@ -309,7 +312,7 @@
             .content>div:not(:last-child) .num:after{content:':';font-size:30px;margin-left: 20px;margin-right:12px;vertical-align: top;}
             .txt {display: block!important;font:bold 12px 'Roboto';margin-right: 50%;}
             
-            .tpl-time div div:nth-of-type(3){font:bold 15px 'Roboto';vertical-align: middle;}
+            .tpl-time div div:nth-of-type(3){font:bold 15px 'Roboto';vertical-align: middle; padding-top: 10px;}
         
             @media(max-width:630px){
             .tpl-time > div:first-of-type > div:nth-of-type(2){display: block;}
