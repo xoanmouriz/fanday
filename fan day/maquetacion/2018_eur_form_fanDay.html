@@ -81,6 +81,13 @@
             .hotels_container .hotel_box.disabled{opacity:0.5;}
             .hotel_section{width:100%;margin: 0 auto;margin-top:-50px;}
             .box_content.legal_section.js-section_active{display: block; max-width: 175px; margin: 0 auto; padding-bottom: 40px;}
+            .inlineblock_parent .politicas{padding-top: 25px;}
+            .inlineblock_parent .politicas label{display: table; position: relative; padding-left: 20px;}
+            .politicas label span{display: table-cell; vertical-align: middle;}
+            .politicas label input{display: table-cell; width: 10px; height: 10px; position: absolute; left: 0; top:3px;}
+            .politicas label span:before{content: ""; width: 12px; height: 12px; position: absolute;top: 5px; left: 0; border: 1px solid #000; background: #fff; border-radius: 50%;}
+            .politicas span:after{content: ""; width: 0; height: 0; transition: .3s; position: absolute; left: 3px; top: 8px;}
+            .politicas label input:checked ~ span:after{content: ""; width: 8px; height: 8px; background: #000; position: absolute; left: 3px; top: 8px;border-radius: 50%;}
             @media(min-width:650px){
             .hotel_section{margin-top:-70px;}
             .div_pink{max-width: 750px;margin:0 auto;}
@@ -98,7 +105,7 @@
             .img_cabecera{width:75%;max-width:379px;}
             .inlineblock_parent{word-spacing:0px;font-size:1px;letter-spacing:-1px;text-align: center;/* padding: 0 50px; */box-sizing: border-box;counter-reset: contador;vertical-align: top;}
             .inlineblock_parent>*{display:inline-block;letter-spacing:normal;white-space:normal;word-spacing:normal;}
-            .js-formError.campo_form input{border:solid 2px #e43027;}
+            .js-formError.campo_form input{border:solid 2px #e43027; color: #e43027;}
             .js-responsive{color: #e43027;font-family: 'Roboto';font-size: 18px;padding:30px 10px 0;}
             .letter-spacing3px{letter-spacing:3px;}
             .legal_section{margin:50px 0 50px;}
@@ -484,10 +491,12 @@
                             <div class="text5">{_XT_CORREO_PARTICIPANTE}</div>
                             <input class="text_input" name="mail" type="text" data-validtype="3">
                         </div>
-                        <div class="campo_form js-label_field">
-                              <input type="checkbox" class="politicas" name="politicas">
-                              <span class="text5">Acepto la <a href="">Política de privacidad</a></span>
-                          </div>
+                        <div class="campo_form politicas js-label_field">
+                            <label>
+                                <input type="checkbox" name="politicas">
+                                <span class="text5">Acepto la <a href="">Política de privacidad</a></span>
+                            </label>
+                        </div>
                     </div>
                     <div class="js-responsive"></div>
                     <div class="enviar_atras_div inlineblock_parent">
@@ -761,6 +770,8 @@
 
                     });
 
+                    if (!$("input[name=politicas]").prop('checked')){ valid_error( $("input[name=politicas]"), true); errors = form_errors.code_error_5; } else { valid_error( $("input[name=politicas]"), false); }
+
                     if (!$('.js-formError', o).length) {
                         var hoteles = '',
                             obj = {
@@ -836,20 +847,16 @@
 
             /* VALIDADORES */
             /* class_error */
-            function valid_error(e, param) { param == true ? e.parent('.js-label_field').addClass('js-formError') : e.parent('.js-label_field').removeClass('js-formError'); };
-            function valid_error(param){
-                if($('.politicas').checked == false){
-                    $('.politicas').parent().addClass('js-formError');
-                }else{
-                    $('.politicas').parent().removeClass('js-formError');
-                };
-      
+            function valid_error(e, param) { param ? e.parents('.js-label_field').addClass('js-formError') : e.parents('.js-label_field').removeClass('js-formError'); };
+            function valid_check(){
+                return $('.politicas').prop('checked');
             }
+        
             function valid_date(param) {
                 var date_regex = /^(((0[1-9]|[12]\d|3[01])\/(0[13578]|1[02])\/((19|[2-9]\d)\d{2}))|((0[1-9]|[12]\d|30)\/(0[13456789]|1[012])\/((19|[2-9]\d)\d{2}))|((0[1-9]|1\d|2[0-8])\/02\/((19|[2-9]\d)\d{2}))|(29\/02\/((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00))))$/g;
                 return date_regex.test(param);
             } 
-            
+        
             /* validador_soloTexto */
             function valid_onlyText(param) { var regex = /^[a-zA-ZáéíóúàèìòùÀÈÌÒÙÁÉÍÓÚñÑüÜ_\s]+$/; if ((regex.test(param))) { return true; } else { return false; } }
             /* validador_vacio */
@@ -857,14 +864,17 @@
             /* máximo de caracteres */
             function valid_maxLetter(e, param) { var b = true; if (e.length > param) b = false; return b; };
             // Form to JSON
-            $.fn.serializeObject = function () { var o = {}, a = this.serializeArray(); $.each(a, function (i, field) { if (o[this.name] !== undefined) { if (!o[this.name].push) { o[this.name] = [o[this.name]]; } o[this.name].push(this.value || ''); } else { o[this.name] = this.value || ''; } }); return o; };
+            $.fn.serializeObject = function () {
+                var o = {}, 
+                a = this.serializeArray(); 
+                $.each(a, function (i, field) { if (o[this.name] !== undefined) { if (!o[this.name].push) { o[this.name] = [o[this.name]]; }; o[this.name].push(this.value || ''); } else { o[this.name] = this.value || ''; }; }); return o; };
 
             
             $('.tick_hotel').each(function(i,e){
-            i == 9 ?
-            $('svg text',e).html(i+1) :
-            $('svg text',e).html(i+1);
-            })
+                i == 9 ?
+                    $('svg text', e).html(i + 1) :
+                    $('svg text',e).html(i+1);
+            });
         </script>
     </body>
 </html>
