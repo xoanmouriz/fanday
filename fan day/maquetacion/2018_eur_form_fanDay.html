@@ -309,10 +309,11 @@
                 .tpl-time{margin: auto;}
             }
 
+            .ganador{padding-top: 15px;}
             .content>div:not(:last-child) .num:after{content:':';font-size:30px;margin-left: 20px;margin-right:12px;vertical-align: top;}
             .txt {display: block!important;font:bold 12px 'Roboto';margin-right: 50%;}
             
-            .tpl-time div div:nth-of-type(3){font:bold 15px 'Roboto';vertical-align: middle; padding-top: 10px;}
+            .tpl-time div div:nth-of-type(3){font:bold 15px 'Roboto';vertical-align: middle;}
         
             @media(max-width:630px){
             .tpl-time > div:first-of-type > div:nth-of-type(2){display: block;}
@@ -383,7 +384,7 @@
                             </div>
                         </div>
                     </div>
-                    <div>{_XT_ANUNCIO_GANADOR_}</div>
+                    <div class="ganador">{_XT_ANUNCIO_GANADOR_}</div>
                 </div>
             </div>
             <!-- fin: BARRA CON CONTADOR -->
