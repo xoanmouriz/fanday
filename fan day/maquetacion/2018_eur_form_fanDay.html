@@ -46,7 +46,7 @@
             .box_intro #fans_counter{display:none;padding: 10px 0px 20px;}
             .box_intro #fans_counter span{line-height:normal;width:100%;color:#fb8c5a;font-size:35px;/* vertical-align:sub;display:inline-block; */font-weight:bolder;font-style:normal;}
             .box_form_title{padding:30px 0px;-webkit-clip-path: polygon(100% 85%, 50% 100%, 0 85%, 0 0, 50% 0, 100% 0);clip-path: polygon(100% 85%, 50% 100%, 0 85%, 0 0, 50% 0, 100% 0);}
-            .box_participando_title{padding:35px 0 20px;font: 22px 'Droid Serif',serif;-webkit-clip-path: polygon(100% 85%, 50% 100%, 0 85%, 0 0, 50% 0, 100% 0);clip-path: polygon(100% 85%, 50% 100%, 0 85%, 0 0, 50% 0, 100% 0);}
+            .box_participando_title{padding:35px 0 20px;font: 22px 'Roboto';-webkit-clip-path: polygon(100% 85%, 50% 100%, 0 85%, 0 0, 50% 0, 100% 0);clip-path: polygon(100% 85%, 50% 100%, 0 85%, 0 0, 50% 0, 100% 0);}
             .box_gracias_title{padding:20px 20px 50px;box-sizing:border-box;}
             .box_gracias_title>*{padding-bottom:20px;}
             .campo_form{position:relative;width:90%;box-sizing:border-box;margin-bottom:10px;}
@@ -63,7 +63,7 @@
             .div_logo_eur{padding:15px;}
             .div_rrss_footer{padding:5px;}
             .div_rrss_footer > a{padding-left:8px;}
-            .enviar_atras_div{padding:30px 0 50px!important;}
+            .enviar_atras_div{padding:30px 0 60px!important;}
             .footer_div{background-color:#00111b;text-align:center;}
             .footer_div>*{width:100%;}
             .form_section{width:100%;max-width:870px;margin:0 auto;padding-top:50px;}
@@ -88,13 +88,13 @@
             .politicas label span:before{content: ""; width: 12px; height: 12px; position: absolute;top: 5px; left: 0; border: 1px solid #000; background: #fff; border-radius: 50%;}
             .politicas span:after{content: ""; width: 0; height: 0; transition: .3s; position: absolute; left: 3px; top: 8px;}
             .politicas label input:checked ~ span:after{content: ""; width: 8px; height: 8px; background: #000; position: absolute; left: 3px; top: 8px;border-radius: 50%;}
-            .content{position: relative; border: 3px solid #fb8c5a; border-radius: 20px;}
+            .content{position: relative; border: 3px solid #fb8c5a; border-radius: 20px; padding: 0;}
             .content .txt{position: absolute; bottom: -23px;}
             @media(min-width:650px){
             .hotel_section{margin-top:-70px;}
             .div_pink{max-width: 750px;margin:0 auto;}
             .inlineblock_parent{padding:0 50px;}
-            
+            .content{position: relative; border: 3px solid #fb8c5a; border-radius: 20px; padding: 0 20px;}
             }
         /*max-width:1165px;*/
             .step_1 input:checked+.hotel_box .tick_hotel svg .sta-relleno,
@@ -114,7 +114,7 @@
             .legal_section{margin:50px 0 50px;}
             .margin_left5px{margin-left: 5px;}
             .margin_right5px{margin-right: 5px;}
-            .min_height75px{min-height:75px;}
+            .min_height75px{min-height:75px; text-shadow: 0 0 15px #000;}
             .modal{color:#ffffff;background:rgb(251, 140, 90,.95);border:none;box-sizing:border-box;/*box-shadow:0 0 2000px 2000px rgba(0,0,0,.5);*/display:none;left:10px;max-width:600px;padding:40px 20px 20px 20px;position:fixed;top:20%;right:10px;z-index:1000;width:auto; border-radius: 20px; box-shadow: 0px 0px 20px 6px #000;}
             .modal .auto{max-width:500px;}
             .modal .aspa{border:1px solid #fff;border-radius:50%;display:inline-block;padding:5px;position:absolute;right:10px;top:10px;}
@@ -124,9 +124,9 @@
             .modal .nombre_ciudad{padding:0;}
             .modal img{background-position:center;background-repeat:no-repeat;background-size:cover;max-width:700px;width:85%;display:block;margin-top:15px; border: 10px solid #fff; box-shadow: 1px 6px 19px -7px #000;}
             .modal .listado{font-size:12px;padding-top:15px;}
-            .modal .listado div{font-weight:bold; border-bottom: 2px solid #fff; }
+            .modal .listado div{font-weight:bold; border-bottom: 2px solid #fff; padding-bottom: 10px; }
             .modal .listado ul{padding-left: 15px;}
-            .modal .nombre_hotel{font-size:16px;}
+            .modal .nombre_hotel{font-size:16px; text-shadow: none;}
             .modal .nombre_ciudad{font-size:15px;}
             .numero_hotel{font-size:30px;display:block;padding-bottom:35px;}
             .numero_hotel img{margin:0 auto;display: none}
@@ -164,8 +164,11 @@
             /* .rrss_div{color:#ffffff;background-color:#fb8c5a;} */
             .rrss_icon{display: inline-block;vertical-align: bottom;position: relative}
             .rrss_icon:first-of-type:before{content:'\e016';font: 24px icons;}
+            .rrss_icon:nth-of-type(2):after,
             .rrss_icon:first-of-type:after{content:'';position: absolute;right:-4px;bottom:0;height: 65px;width: 2px;background: #d2d2d2;}
-            @media(max-width:324px){.rrss_icon:first-of-type:after{display:none;}}
+            @media(max-width:324px){
+            .rrss_icon:nth-of-type(2):after,
+            .rrss_icon:first-of-type:after{display:none;}}
             .rrss_icon:last-of-type:before{content: '\e0f5';font: 24px icons;}
             .rrss_icon:nth-of-type(2):before{content: '\e010';font: 24px icons;}
             .rr_ss{background-color:transparent;border:none;}
@@ -182,7 +185,8 @@
             .gracias_text>*:not(:last-child){padding-bottom:30px;}
             .gracias_text>*{padding-bottom:8px;}
             .page_title{color:#000000;font-family:'Droid Serif';font-size:17px;padding-bottom:30px;font-weight:normal; letter-spacing: 0.025em;}
-            .sorteo_deseo{color: #00111b; font: 15px/18px 'Roboto',sans-serif;padding: 20px 30px 30px;letter-spacing: 0.025em;}
+            .sorteo_deseo{color: #00111b; font:lighter 15px/18px 'Roboto';padding: 20px 30px 30px;letter-spacing: 0.025em;}
+            .sorteo_deseo span{font-weight: bold;}
             @media (min-width:650px){
                 .sorteo_deseo{ font-size: 20px;line-height: 36px;margin: 0 auto; max-width: 712px; display: inline-block;}
                 .text2{/* font-size:22px!important; */text-align:center;max-width: 712px;margin:0 auto;}
@@ -197,7 +201,7 @@
             .stars{text-align: center; margin: 20px;}
             .text2{color:#00111b;font-size: 20px; font-weight: bold;}
             .text2 span{font-weight: normal; margin-bottom: 30px;}
-            .text3{font-family:'Droid Serif';font-size:29px;text-align:center;}
+            .text3{font-family:'Roboto';font-size:29px;text-align:center;}
             .text4{font-family:'Roboto';font-size:17px;text-align:center;padding: 5px 20px;}
             .text5{font-family:'Roboto';font-size:18px;color:#6f8191;text-align: left;}
             .text6{font:19px/24px 'Roboto',sans-serif;letter-spacing: 0.025em;font-weight:bolder;color:#fb8c5a;}
@@ -235,8 +239,8 @@
             .box_intro #fans_counter span{font-size:46px;}
             .box_hotels_title{padding:125px 0px 115px 0px;}
             /* .box_form_title{padding: 30px 0px;} */
-            .box_participando_title{padding:70px 20px 30px;}
-            .box_gracias_title{padding:30px 20px 50px;box-sizing:border-box;}
+            .box_participando_title{padding:70px 20px 20px;}
+            .box_gracias_title{padding:0 20px 50px;box-sizing:border-box;}
             /* .box_gracias_title>*{padding-bottom:25px;}
             .campo_form{width:45%;padding-left: 30px!important;padding-right: 30px!important;} */
             .campo_form{width:50%;}
@@ -254,7 +258,7 @@
             .margin_right5px_tablet{margin-right: 5px;}
             .modal img{max-width:700px;}
             .modal .listado{font-size:14px;}
-            .min_height120px_tablet{min-height:120px;}
+            .min_height120px_tablet{min-height:120px; }
             .numero_hotel{padding-bottom:30px;}
             .padding_bottom_auxiliar{padding-bottom:15px;}
             .padding_left5px_tablet{padding-left:5px;}
@@ -274,7 +278,7 @@
         /*TEXTS*/
             .date_placeholder{padding:10px 5px;}
             .date_text{font-size:26px;}
-            .gracias_text>*{padding-bottom:20px;}
+            .gracias_text>*{padding-bottom:30px;}
             .page_title{font-size:36px;}
             .text1{font-size:20px;max-width:750px;}
             /* .text2{font-size:32px!important;} */
@@ -288,14 +292,15 @@
             .rrss_icon:first-of-type:before,
             .rrss_icon:last-of-type:before{font-size: 48px; margin: 30px;}
             .rrss_suerte{font-size: 36px;padding-top:25px;}
-            .rrss_icon:first-of-type:after{bottom: 50%;height: 66px;margin-bottom: -33px;}
+            .rrss_icon:nth-of-type(2):after,
+            .rrss_icon:first-of-type:after{bottom: 50%;height: 66px;margin-bottom: -22px;}
         }
 
         /* CONTADOR */
-            .tpl-time{background: #fffab0;color:#000;text-align: center;padding:20px 10px;display: none;margin:0 30px; text-transform: uppercase; font-weight: bold; font-family: 'Oswald';}
+            .tpl-time{background: #fffab0;color:#000;text-align: center;padding:20px 10px 40px;display: none;margin:0 30px; text-transform: uppercase; font-weight: bold; font-family: 'Oswald';}
             .tpl-time.hidden{display:none!important;}
             .tpl-time div{display: inline-block;vertical-align: middle;text-align: center;}
-            .tpl-time div div:first-of-type{font:bold 15px 'Roboto';vertical-align: middle;margin: 7px 0;}
+            .tpl-time div div:first-of-type{font:bold 15px 'Oswald';vertical-align: middle;margin: 7px 0;}
             .tpl-time .num{color: #fb8c5a;}
             .tpl-time > div:first-of-type > div:nth-of-type(2){margin: 0 10px;}      
             .num {font:bold 45px/35px 'Roboto'!important;}
@@ -307,16 +312,25 @@
 
             @media(min-width:650px){
                 .tpl-time{margin: auto;}
-            }
+                .ganador{padding-top: 0;}    
 
-            .ganador{padding-top: 15px;}
+            }
+            .ganador{padding-top: 20px;}
             .content>div:not(:last-child) .num:after{content:':';font-size:30px;margin-left: 20px;margin-right:12px;vertical-align: top;}
             .txt {display: block!important;font:bold 12px 'Roboto';margin-right: 50%;}
             
-            .tpl-time div div:nth-of-type(3){font:bold 15px 'Roboto';vertical-align: middle;}
+            .tpl-time div div:nth-of-type(3){font:bold 15px 'Oswald';vertical-align: middle;}
         
+            @media(min-width:770px){
+            .ganador{padding-top: 0;}
+
+            }
             @media(max-width:630px){
             .tpl-time > div:first-of-type > div:nth-of-type(2){display: block;}
+            }
+            @media(max-width:550px){
+            .ganador{padding-top: 20px;}            
+            .txt {font:bold 9px 'Roboto';}
             }
       /* CONTADOR */
 
